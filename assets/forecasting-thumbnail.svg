@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Time-series forecasting chart</title>
+  <desc id="desc">A dashboard-style time-series chart with observations, a forecast, and an at-risk region.</desc>
+  <rect width="900" height="520" fill="#f3f6fb"/>
+  <rect x="86" y="70" width="728" height="360" rx="24" fill="#ffffff" stroke="#d8d8cf" stroke-width="4"/>
+  <g stroke="#e1e5ea" stroke-width="3">
+    <path d="M140 140 H760"/>
+    <path d="M140 220 H760"/>
+    <path d="M140 300 H760"/>
+    <path d="M140 380 H760"/>
+  </g>
+  <path d="M140 334 C205 292 244 312 292 260 C345 202 394 248 450 206 C504 166 548 198 600 152" fill="none" stroke="#245f73" stroke-width="9" stroke-linecap="round"/>
+  <path d="M600 152 C650 132 688 176 742 112" fill="none" stroke="#d05b4f" stroke-width="9" stroke-linecap="round" stroke-dasharray="18 18"/>
+  <path d="M600 152 C650 205 696 246 742 294" fill="none" stroke="#d05b4f" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 14" opacity="0.55"/>
+  <path d="M600 152 C650 92 696 80 742 68" fill="none" stroke="#d05b4f" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 14" opacity="0.55"/>
+  <rect x="595" y="322" width="160" height="54" rx="14" fill="#fdebea"/>
+  <text x="624" y="357" fill="#a73b31" font-family="Arial, sans-serif" font-size="22" font-weight="700">at risk</text>
+  <circle cx="600" cy="152" r="12" fill="#202124"/>
+</svg>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta property="description" content="New object reconstruction with 3D Dynamic Gaussian Splatting"/>
+  <meta property="url" content="improved-3dgstream-miazga"/>
+  
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="image" content="./banner/banner.jpg"/>
+  <meta property="image:width" content="1200"/>
+  <meta property="image:height" content="630"/>
+  
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="3D Gaussian Splatting, Free-Viewpoint Videos">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Improved 3DGStream Project Page</title>
+  <link rel="icon" href="../../favicon.ico?v=4" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg?v=4">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32.png?v=4">
+  <link rel="shortcut icon" href="../../favicon.ico?v=4">
+  <link rel="apple-touch-icon" href="../../apple-touch-icon.png?v=4">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="../../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../../static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="../../static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="../../static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="../../static/css/project-page.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="../../static/js/fontawesome.all.min.js"></script>
+  <script src="../../static/js/bulma-carousel.min.js"></script>
+  <script src="../../static/js/bulma-slider.min.js"></script>
+  <script src="../../static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Improved New Object Reconstruction with Dynamic Gaussian Splatting</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+                        <div class="author-block">
+                          <a href="https://www.linkedin.com/in/ewa-miazga/" target="_blank">Ewa Miazga</a>
+                        </div>
+            </div>
+            <div class="is-size-5 publication-authors">
+                        <div class="author-block">
+                          Supervisor: <a href="https://saqibjaved1.github.io" target="_blank">Saqib Javed</a>
+                        </div>
+            </div>
+
+                        <div class="is-size-5 publication-authors">
+                                <span class="author-block">EPFL<br>Research Project</span>
+                        </div> 
+
+              <!-- EPFL Logo -->
+                        <div class="has-text-centered" style="margin-top: 1rem;">
+                          <img src="../../assets/epfl-logo.png" alt="EPFL Logo" style="max-height: 100px;">
+                        </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://github.com/ewaMiazga/dynamic-gaussians-2025/blob/local/CV_lab_Report-3.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/ewaMiazga/improved-3dgstream" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4 has-text-centered">Side-by-Side Comparison</h2>
+
+    <div class="columns is-centered is-vcentered">
+      <!-- Left Video -->
+      <div class="column has-text-centered">
+        <p><strong>3DGStream</strong></p>
+        <video autoplay loop muted playsinline width="100%">
+          <source src="teaser-videos/org-code-spawn1-iter300-0.00007.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Right Video -->
+      <div class="column has-text-centered">
+        <p><strong>Ours</strong></p>
+        <video autoplay loop muted playsinline width="100%">
+          <source src="teaser-videos/0.2-spawn500-dyn-color-spawn-300iter-new-loss-color-map-min-dist-1-col-mask.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Reconstruction of 3D scenes using multi-view cameras remains a significant challenge today. Training is often computationally expensive and does not always guarantee high-quality reconstructions. Furthermore, existing methods may not be suitable for all types of 3D scenes—such as indoor or outdoor environments with many dynamic objects. One notable limitation is the inability to reconstruct objects that emerge after the first frame. Methods like HiCoM and 3DG-Stream rely on a per-frame optimization strategy that is initialized from the first frame, making them unable to model objects that appear later in the sequence. In contrast, Dynamic 3D Gaussian Splatting adopts a frame-to-frame optimization approach, which allows for continuous updates and appears better suited for handling newly emerging elements in dynamic scenes. This work presents both qualitative and quantitative comparisons of the aforementioned methods, focusing on their ability to reconstruct newly appearing objects in dynamic 3D scenes. Additionally, it introduces an improved version of the 3DG-Stream method, which demonstrates the capability to reconstruct new objects more effectively.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Evaluation -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-2 has-text-centered">Evaluation</h2>
+
+    <!-- Quantitative Evaluation -->
+    <div class="content">
+      <h3 class="title is-4">Quantitative Results</h3>
+      
+      <div class="content has-text-justified">
+      <p class="is-size-6 mt-2">
+        The reported PSNR values indicate that all three methods
+        achieve similar reconstruction quality, consistent with the
+        results presented in their respective papers.
+        These results suggest that the majority of the scene was
+        reconstructed successfully and with high fidelity. The
+        HiCoM method achieves significantly lower storage requirements, highlighting a key improvement in efficiency
+        compared to other approaches.
+        Improved 3DG-Stream achieves only a slightly higher
+        PSNR compared to the original version. Although the reconstruction of the phone is more detailed and visible in
+        more frames than in the baseline, this improvement comes
+        at a cost: for every new Gaussian added, one is removed. As
+        a result, the method may under-reconstruct some uniform
+        regions, ultimately balancing out the PSNR and failing to
+        fully reflect the improved reconstruction quality. Furthermore, since the phone occupies only a small portion of the
+        scene, its contribution to the overall PSNR metric is limited.
+        </p>
+      
+      <div class="has-text-centered">
+        <img src="results/eval-graphs.png" alt="Quantitative Evaluation Graph"
+        style="width: 120%; height: auto; margin-top: 1rem;">
+      </div>
+
+        <p class="is-size-6 mt-2">
+        3DG-Stream emphasizes the importance of undistorting
+        subsequent camera frames. This process removes lens distortion from the input images and updates the associated
+        camera parameters, resulting in a rectified version of the
+        scene that is more suitable for geometric processing.
+        A significant improvement was observed only for
+        3DG-Stream, which demonstrated a 39% performance increase. The results for the other methods remained within
+        the standard deviation observed across multiple runs.
+        </p>
+      </div>
+    </div>
+
+  <!-- Videos Section -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <h2 class="title is-4 has-text-centered"></h2>
+  
+      <div style="display: flex; overflow-x: auto; gap: 1rem; padding-bottom: 1rem; align-items: center;">
+  
+        <!-- Video 1 -->
+        <div style="flex: 0 0 320px; text-align: center;">
+          <p><strong>Ours</strong></p>
+          <video autoplay loop muted playsinline width="100%">
+            <source src="teaser-videos/0.2-spawn500-dyn-color-spawn-300iter-new-loss-color-map-min-dist-1-col-mask.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+  
+        <!-- Video 2 -->
+        <div style="flex: 0 0 320px; text-align: center;">
+          <p><strong>3DGStream</strong></p>
+          <video autoplay loop muted playsinline width="100%">
+            <source src="teaser-videos/org-code-spawn1-iter300-0.00007.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+  
+        <!-- Video 3 -->
+        <div style="flex: 0 0 320px; text-align: center;">
+          <p><strong>HiCoM</strong></p>
+          <video autoplay loop muted playsinline width="100%">
+            <source src="carousel-videos/hicom.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+  
+        <!-- Video 4 -->
+        <div style="flex: 0 0 320px; text-align: center;">
+          <p><strong>Dynamic 3D Gaussians</strong></p>
+          <video autoplay loop muted playsinline width="100%">
+            <source src="carousel-videos/Dynamic3DGaussians.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+  
+        <!-- Video 5 -->
+        <div style="flex: 0 0 320px; text-align: center;">
+          <p><strong>Ground Truth</strong></p>
+          <video autoplay loop muted playsinline width="100%">
+            <source src="carousel-videos/output_gt.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  <!-- End Videos section -->
+
+
+    <!-- Qualitative Evaluation -->
+    <div class="content" style="margin-top: 3rem;">
+      <h3 class="title is-4">Qualitative Results</h3>
+      <div class="content has-text-justified">
+
+
+      <p class="is-size-6 mt-2">
+        Eventhough all the methods yield satisfactory results in
+        terms of metrics, it is impossible to tell if our evaluation objective was met. To gain comprehensive insight into quality
+        of new object reconstruction in the rendered frames from
+        test camera.
+      </p>
+        
+      <div class="has-text-centered mb-5">
+      <img src="results/cover-pic.png" alt="Qualitative Result 1"
+           style="max-width: 100%; height: auto; border: 1px solid #ddd; padding: 4px;">
+      </div>
+        
+      <p class="is-size-6 mt-2">
+        3DGStream The emerging object - a phone - fails to be
+        reconstructed, indicating a shortcoming in Stage 2 of the
+        optimization process, which is designed to account for new
+        objects appearing in the scene. Stage 2 relies on detecting high view-space positional gradients to localize underreconstructed regions. However, in this case, the phone is
+        small, blue in color, and partially blends with a green T-shirt
+        background. Its motion is also minimal. These combined
+        factors likely result in positional gradients that are too weak
+        to surpass the threshold required for new Gaussian spawning. As a result, the model does not recognize this region as
+        requiring additional representation.
+      </p>
+
+      <p class="is-size-6 mt-2">
+        Dynamic 3D Gaussians In contrast to the previous methods, Dynamic 3D Gaussians successfully reconstructs the
+        phone, despite the authors stating that modeling newly
+        emerging objects is a limitation of their approach. While
+        no new Gaussians are introduced during the main training
+        loop, an excess of them is generated during the densification step applied to the initial frame. The existing ones
+        are allowed to move and rotate freely across frames. Unlike HiCoM, which applies motion in a coarse, region-based
+        manner, Dynamic 3D Gaussians performs motion estimation at the level of individual gaussian. This flexibility enables some gaussians - originally associated with the T-shirt
+        in the first frame - to be displaced toward the region where
+        the phone appears.
+        This behavior is guided by a combination of physically-inspired regularization losses: local rigidity, rotation consistency, and isometry. These priors ensure that gaussians
+        move in a coherent and physically plausible manner while
+        allowing sufficient flexibility to capture local deformations.
+        Additionally, the phone’s color similarity to the surrounding T-shirt may have contributed to the reconstruction, as it
+        allows nearby gaussians with similar appearance attributes
+        to approximate the phone without requiring new gaussians
+        to be added.
+      </p>
+      
+      <p class="is-size-6 mt-2">
+        Improved 3DG-Stream The reconstruction of the new
+        object is detailed and does not suffer from underreconstruction. However, one notable flaw is the flickering effect observed in the output video - the object is
+        not consistently reconstructed in every frame. This issue
+        arises because the difference maps used to identify underreconstructed regions are computed from a single view. If
+        the object is occluded or not visible in that view, the corresponding region is not flagged for densification, and thus
+        remains under-reconstructed. Conversely, when the object
+        is visible, it is accurately reconstructed, demonstrating that
+        the method behaves as intended when provided with the correct visibility cues.
+        It is also worth noting that the dynamic spawning mechanism successfully prevents excessive Gaussian spawning
+        in unrelated regions, effectively avoiding artifacts such
+        as “flying Gaussians.” Nonetheless, the reliance on view-dependent evaluation remains a key limitation of this approach and should be further addressed in future work.
+      </p>
+      </div>
+      
+      <div class="has-text-centered">
+        <img src="results/qualitative-res.png" alt="Qualitative Result 2"
+             style="max-width: 100%; height: auto; border: 1px solid #ddd; padding: 4px;">
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- End Evaluation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            Website template credit to <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>

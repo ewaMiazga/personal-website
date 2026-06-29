@@ -1,53 +1,78 @@
-# Academic Project Page Template
-This is an academic paper project page template.
+# Ewa Miazga Website
 
+This repository contains two related static pages:
 
-Example project pages built using this template are:
-- https://horwitz.ai/probex
-- https://vision.huji.ac.il/probegen
-- https://horwitz.ai/mother
-- https://horwitz.ai/spectral_detuning
-- https://vision.huji.ac.il/ladeda
-- https://vision.huji.ac.il/dsire
-- https://horwitz.ai/podd
-- https://dreamix-video-editing.github.io
-- https://horwitz.ai/conffusion
-- https://horwitz.ai/3d_ads/
-- https://vision.huji.ac.il/ssrl_ad
-- https://vision.huji.ac.il/deepsim
+- `index.html` - the personal homepage.
+- `projects/3dgstream/index.html` - the 3DGStream project page.
 
+The root `index.html` stays at the top level so GitHub Pages and similar static hosts can serve it as the homepage.
 
+## Editing Guide
 
-## Start using the template
-To start using the template click on `Use this Template`.
+### Personal Website
 
-The template uses html for controlling the content and css for controlling the style. 
-To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.  
+Edit:
 
-**IMPORTANT!** Make sure to replace the `favicon.ico` under `static/images/` with one of your own, otherwise your favicon is going to be a dreambooth image of me.
+- Homepage content: `index.html`
+- Homepage styling: `static/css/personal-site.css`
+- Homepage navigation behavior: `static/js/personal-site.js`
+- Personal images, CV, logos, and thumbnails: `assets/`
 
-## Components
-- Teaser video
-- Images Carousel
-- Youtube embedding
-- Video Carousel
-- PDF Poster
-- Bibtex citation
+Useful homepage sections in `index.html`:
 
-## Tips:
-- The `index.html` file contains comments instructing you what to replace, you should follow these comments.
-- The `meta` tags in the `index.html` file are used to provide metadata about your paper 
-(e.g. helping search engine index the website, showing a preview image when sharing the website, etc.)
-- The resolution of images and videos can usually be around 1920-2048, there rarely a need for better resolution that take longer to load. 
-- All the images and videos you use should be compressed to allow for fast loading of the website (and thus better indexing by search engines). For images, you can use [TinyPNG](https://tinypng.com), for videos you can need to find the tradeoff between size and quality.
-- When using large video files (larger than 10MB), it's better to use youtube for hosting the video as serving the video from the website can take time.
-- Using a tracker can help you analyze the traffic and see where users came from. [statcounter](https://statcounter.com) is a free, easy to use tracker that takes under 5 minutes to set up. 
-- This project page can also be made into a github pages website.
-- Replace the favicon to one of your choosing (the default one is of the Hebrew University). 
-- Suggestions, improvements and comments are welcome, simply open an issue or contact me. You can find my contact information at [https://horwitz.ai](https://horwitz.ai)
+- Hero/profile: search for `personal-hero`
+- News: search for `id="news"`
+- Publications: search for `id="publications"`
+- Education: search for `id="education"`
+- Experience: search for `id="experience"`
+- Former projects: search for `id="projects"`
 
-## Acknowledgments
-Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
+### 3DGStream Project Page
 
-## Website License
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+Edit:
+
+- Project page content: `projects/3dgstream/index.html`
+- Project page styling: `static/css/project-page.css`
+- Project images: `projects/3dgstream/results/`
+- Project teaser videos: `projects/3dgstream/teaser-videos/`
+- Project comparison videos: `projects/3dgstream/carousel-videos/`
+- Project banner image: `projects/3dgstream/banner/`
+- Local project report copy: `projects/3dgstream/CV_lab_Report-3.pdf`
+
+The project page uses paths relative to `projects/3dgstream/index.html`, so files inside the same project folder can be referenced directly, for example:
+
+```html
+<img src="results/eval-graphs.png" alt="Quantitative Evaluation Graph">
+<source src="teaser-videos/example.mp4" type="video/mp4">
+```
+
+Shared files from the repository root need `../../`, for example:
+
+```html
+<link rel="stylesheet" href="../../static/css/project-page.css">
+<img src="../../assets/epfl-logo.png" alt="EPFL Logo">
+```
+
+## Project Structure
+
+```text
+.
+├── index.html
+├── assets/
+├── docs/
+├── projects/
+│   └── 3dgstream/
+│       ├── index.html
+│       ├── banner/
+│       ├── carousel-videos/
+│       ├── results/
+│       ├── teaser-videos/
+│       └── unused-videos/
+└── static/
+    ├── css/
+    └── js/
+```
+
+## Visitor Analytics
+
+See `docs/visitor-analytics.md` for notes on collecting visitor counts.

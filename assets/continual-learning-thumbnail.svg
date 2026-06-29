@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Continual learning memory diagram</title>
+  <desc id="desc">Sequential learning tasks flowing into a memory module with a stable model output.</desc>
+  <rect width="900" height="520" fill="#f7f4ef"/>
+  <g fill="#ffffff" stroke="#d8d8cf" stroke-width="4">
+    <rect x="80" y="120" width="155" height="120" rx="20"/>
+    <rect x="80" y="280" width="155" height="120" rx="20"/>
+    <rect x="372" y="160" width="170" height="200" rx="24"/>
+    <rect x="660" y="200" width="160" height="120" rx="20"/>
+  </g>
+  <g fill="#245f73" font-family="Arial, sans-serif" font-weight="700">
+    <text x="126" y="190" font-size="30">Task A</text>
+    <text x="126" y="350" font-size="30">Task B</text>
+    <text x="403" y="246" font-size="30">Memory</text>
+    <text x="410" y="286" font-size="20" fill="#667076">regularized</text>
+    <text x="700" y="272" font-size="30">Model</text>
+  </g>
+  <g fill="none" stroke="#7f9994" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M235 180 H340"/>
+    <path d="M235 340 H302 C336 340 344 292 372 292"/>
+    <path d="M542 260 H660"/>
+  </g>
+  <g fill="#d05b4f">
+    <circle cx="457" cy="318" r="11"/>
+    <circle cx="425" cy="318" r="11"/>
+    <circle cx="489" cy="318" r="11"/>
+  </g>
+</svg>
